@@ -1,0 +1,674 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Master Mind</title>
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Damion&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+      src="/socket.io/socket.io.js"
+    ></script>
+    <script src="skrypt.js"></script>
+    <script src="skryptMultiplayer.js"></script>
+
+</head>
+    
+<body>
+ 
+	<div class="conteiner">
+		
+        <h1>MasterMind</h1>
+        
+        <div class="plansza">
+        
+            <div class="left">
+                
+                <div class="sekcja sekcjaodp">
+                
+                    <div class="kolor">?<div class="kolor1"></div></div>
+                    <div class="kolor">?<div class="kolor2"></div></div>
+                    <div class="kolor">?<div class="kolor3"></div></div>
+                    <div class="kolor">?<div class="kolor4"></div></div>
+                
+                </div>
+                
+                <div class="sekcja sekcja8">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+                
+                <div class="sekcja sekcja7">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+                
+                <div class="sekcja sekcja6">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+                
+                <div class="sekcja sekcja5">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+                
+                <div class="sekcja sekcja4">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+                
+                <div class="sekcja sekcja3">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+                
+                <div class="sekcja sekcja2">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+            
+                <div class="sekcja sekcja1">
+                
+                    <div class="kolor"><div class="kol kolor1"></div></div>
+                    <div class="kolor"><div class="kol kolor2"></div></div>
+                    <div class="kolor"><div class="kol kolor3"></div></div>
+                    <div class="kolor"><div class="kol kolor4"></div></div>
+                
+                </div>
+            
+            </div>
+            
+            <div class="right">
+            
+                <div style="width: 100%; height: 90px;"></div>
+                
+                <div class="sprawdz sprawdz8">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdz sprawdz7">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="sprawdz sprawdz6">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdz sprawdz5">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdz sprawdz4">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdz sprawdz3">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdz sprawdz2">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdz sprawdz1">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div style="clear: both"></div>
+            
+            <div class="sekcja kolory">
+                
+                    <div class="kolor kolory1" onclick="klik(1)"></div>
+                    <div class="kolor kolory2" onclick="klik(2)"></div>
+                    <div class="kolor kolory3" onclick="klik(3)"></div>
+                    <div class="kolor kolory4" onclick="klik(4)"></div>
+                    <div class="kolor kolory5" onclick="klik(5)"></div>
+                    <div class="kolor kolory6" onclick="klik(6)"></div>
+                
+            </div>
+            
+            <div class="buttons">
+            
+                <div class="wysrodkowanie2">
+                
+                    <div class="czas">00:00</div>
+                    <div class="cofnij" onclick="back()">&#8592;</div>
+                
+                </div>
+                
+                <div class="wysrodkowanie2">
+                
+                    <div class="butmenu" onclick="menu()" style="background-color: #3d81c2;">MENU</div>
+                    <div class="butmenu" onclick="pomocc()">POMOC</div>
+                    <div class="restart" onclick="restart()">RESTART</div>
+                
+                </div>
+
+            </div>
+        
+        </div>
+        
+        <div class="pomoc">
+            
+            <h3 class="pom">Pomoc</h3>
+            
+            <p>Mastermind jest jedną z popularnych niegdyś gier. Gra polega na odgadnięciu 4 ukrytych kul. Gra zostanie rozwiązana, jeśli w ciągu 8 tur gracz odgadnie wylosowane kule. W każdej turze gracz wybiera 4 kule, po której sprawdzane jest czy trafił. Każda prawidłowo odgadnięta kula (kula o właściwym kolorze na właściwym miejscu) sygnalizowana jest czarną kropką. Jeśli gracz odgadł kolor kuli, ale nie odgadł jej lokalizacji, wówczas jest to sygnalizowane białą kropką. Kolejność występowania białych i czarnych kul jest przypadkowa, dlatego gracz nie wie, które kule są właściwe, które zaś nie.</p>
+            
+            <div class="restart back" onclick="powrot()">POWRÓT</div>
+        
+        </div>
+
+        <div class="mainMenu">
+            
+            <p style="text-align: center; margin-top: 60px; margin-bottom: 20px;" >Twoje ID </p>
+
+            <input class="userId" value="" readonly="readonly">
+
+            <br>
+            
+            <p style="text-align: center; margin-top: 40px; margin-bottom: 30px;" >Wpisz ID gracza z którym chcesz zagrać</p>
+
+            <input class="userIdInput" value="" placeholder="Wpisz ID gracza" maxlength="20">
+
+            <input style="margin-top: 10px;" class="userNickInput" value="" placeholder="Wpisz swój nick" maxlength="20">
+
+            <p class="errorConnection" style="text-align: center; margin-top: 10px; margin-bottom: 0px; height: 10px; color: #e22d2d;" ></p>
+            
+            <div class="restart back" onclick="playmultiplayer()" style="margin-top: 35px;" >POŁĄCZ</div>
+
+            <p style="text-align: center; margin-top: 50px; margin-bottom: 20px;" >Lub zagraj w pojedynkę</p>
+
+            <div class="restart back" onclick="graj()" style="margin-top: 30px; background-color: #e22d2d;" >GRAJ</div>
+
+
+            <p style="text-align: center; margin-top: 94px; margin-bottom: 20px; font-size: 17px;" >Autor: Dominik Birak</p>
+            
+        
+        </div>
+
+        <div class="planszaMultiplayer">
+        
+            <div class="left">
+                
+                <div class="sekcjaMulti sekcjaodp sekcjaodpM">
+                
+                    <div class="kolor">?<div class="kolor1 kolorM1"></div></div>
+                    <div class="kolor">?<div class="kolor2 kolorM2"></div></div>
+                    <div class="kolor">?<div class="kolor3 kolorM3"></div></div>
+                    <div class="kolor">?<div class="kolor4 kolorM4"></div></div>
+                
+                </div>
+                
+                <div class="sekcjaMulti sekcja8 sekcjaM8">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+                
+                <div class="sekcjaMulti sekcja7 sekcjaM7">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+                
+                <div class="sekcjaMulti sekcja6 sekcjaM6">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+                
+                <div class="sekcjaMulti sekcja5 sekcjaM5">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+                
+                <div class="sekcjaMulti sekcja4 sekcjaM4">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+                
+                <div class="sekcjaMulti sekcja3 sekcjaM3">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+                
+                <div class="sekcjaMulti sekcja2 sekcjaM2">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+            
+                <div class="sekcjaMulti sekcja1 sekcjaM1">
+                
+                    <div class="kolor"><div class="kol kolor1 kolorM1"></div></div>
+                    <div class="kolor"><div class="kol kolor2 kolorM2"></div></div>
+                    <div class="kolor"><div class="kol kolor3 kolorM3"></div></div>
+                    <div class="kolor"><div class="kol kolor4 kolorM4"></div></div>
+                
+                </div>
+            
+            </div>
+            
+            <div class="right">
+            
+                <div style="width: 100%; height: 90px;"></div>
+                
+                <div class="sprawdzMulti sprawdz8 sprawdzM8">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdzMulti sprawdz7 sprawdzM7">
+                
+                    <div class="wysrodkowanie ">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="sprawdzMulti sprawdz6 sprawdzM6">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdzMulti sprawdz5 sprawdzM5">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdzMulti sprawdz4 sprawdzM4">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdzMulti sprawdz3 sprawdzM3">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdzMulti sprawdz2 sprawdzM2">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+                
+                <div class="sprawdzMulti sprawdz1 sprawdzM1">
+                
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka1"></div></div>
+                            <div class="kropka"><div class="kro kropka2"></div></div>
+                        
+                    </div>
+                    
+                    <div class="wysrodkowanie">
+                        
+                            <div class="kropka"><div class="kro kropka3"></div></div>
+                            <div class="kropka"><div class="kro kropka4"></div></div>
+                        
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <div style="clear: both"></div>
+            
+            <div class="sekcja kolory">
+                
+                    <div class="kolor kolory1" onclick="klikM(1)"></div>
+                    <div class="kolor kolory2" onclick="klikM(2)"></div>
+                    <div class="kolor kolory3" onclick="klikM(3)"></div>
+                    <div class="kolor kolory4" onclick="klikM(4)"></div>
+                    <div class="kolor kolory5" onclick="klikM(5)"></div>
+                    <div class="kolor kolory6" onclick="klikM(6)"></div>
+                
+            </div>
+            
+            <div class="buttons">
+            
+                <div class="wysrodkowanie2" style="margin-top: 2px;">
+                
+                    <div class="info">Przegrana! Nowa trura za 4</div>
+                    <div class="cofnij" onclick="backM()">&#8592;</div>
+                
+                </div>
+                
+                <div class="wysrodkowanie2">
+                
+                    <div>
+                        <div class="flex" style="display: flex; justify-content: space-between;">
+                            <div class="nazwa1"></div>
+                            <div class="wynik1"></div>
+                        </div>
+                        <div class="flex" style="display: flex; justify-content: space-between;">
+                            <div class="nazwa2"></div>
+                            <div class="wynik2"></div>
+                        </div>
+                    </div>
+                    <div class="restart" style="margin-top: 6px;" onclick="showAlert()">MENU</div>
+                
+                </div>
+
+            </div>
+        
+        </div>
+        
+        
+    </div>
+    
+    <div class="alert alertS">
+        
+            <h2 class="statusS"></h2>
+        
+            <span class="span1">Liczba prób:</span>
+            <span class="span2 p"></span>
+            
+            <span class="span1">Czas:</span>
+            <span class="span2 c"></span>
+        
+            <div style="clear: both"></div>
+            
+            <div class="ok" onclick="ok()">OK</div>
+        
+    </div>
+
+    <div class="alert alertM">
+        
+        <h2>Menu</h2>
+    
+        <span class="span1" style="text-align: center; display: block; width: 100%;">Czy chcesz wyjść z rozgrywki?</span>
+        
+        <div style="display: flex; margin: 0 auto; width: 100%; justify-content: space-around;">
+            <div class="no" style="background-color: #9cc841;" onclick="closeAlert()">Nie</div>
+            <div class="yes" style="background-color: #e22d2d;" onclick="menuM()">TAK</div>
+        </div>
+    
+    </div>
+
+    <script>
+        const socket = io();
+
+        socket.on("connect", () => {
+        $(".userId").val(socket.id);
+        });
+
+        const numberNick = Math.floor(Math.random() * (999 - 100) + 100);
+        const nickName = "Gość#"+numberNick;
+
+        $(".userNickInput").attr("placeholder", "Wpisz swój nick ("+nickName+")");
+            
+        socket.onAny(listener);
+
+        socket.emit("sendName", $(".userNickInput").val() == "" ? nickName : $(".userNickInput").val());
+
+        $( ".userNickInput" ).change(function() {
+            socket.emit("sendName", $(".userNickInput").val() == "" ? nickName : $(".userNickInput").val());
+        });
+
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,492 @@
+body
+{
+    background-color: #ffd1a0;
+    transition: 1s ease all;
+    user-select: none;
+}
+
+.conteiner
+{
+    width: 380px;
+    height: 845px;
+    border: 3px solid #5b2f00;
+    margin: 30px auto;
+    transition: 1s ease all;
+    filter: blur(0px);
+    pointer-events: all;
+    overflow: hidden;
+}
+
+h1
+{
+    font-family: 'Damion', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #5b2f00;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #ffd1a0;
+}
+
+.plansza
+{
+    position: absolute;
+    left: 0px;
+    width: 380px;
+    height: 770px;
+    z-index: 999;
+    background-color: #ffd1a0;
+    transition: 1s ease all;
+    transform: translateX(390px);
+}
+
+.planszaMultiplayer 
+{
+    position: absolute;
+    left: 0px;
+    width: 380px;
+    height: 770px;
+    z-index: 999;
+    background-color: #ffd1a0;
+    transition: 1s ease all;
+    transform: translateX(-390px);
+}
+
+.pomoc
+{
+    position: absolute;
+    width: 380px;
+    height: 770px;
+    transform: translateX(780px);
+    transition: 1s ease all;
+}
+
+.mainMenu
+{
+    position: absolute;
+    width: 380px;
+    height: 770px;
+    transform: translateX(0px);
+    transition: 1s ease all;
+}
+
+.left
+{
+    width: 75%;
+    float: left;
+}
+
+.right
+{
+    float: left;
+    width: 25%;
+}
+
+.sekcja
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding-top: 7.5px;
+    overflow: hidden;
+}
+
+.sekcjaMulti 
+{
+    width: 100%;
+    height: 57px;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding-top: 7.5px;
+    overflow: hidden;
+}
+
+.kolor
+{
+    width: 45px;
+    height: 45px;
+    background-color: #cc9963;
+    border-radius: 100%;
+}
+
+.sekcjaodp
+{
+    border-bottom: 3px dashed #cc9963;
+    margin: 10px 0;
+    height: 70px;
+}
+
+.sekcjaodp .kolor
+{
+    color: #ffd1a0;
+    font-size: 30px;
+    font-family: segoe ui;
+    font-weight: 700;
+    text-align: center;
+    line-height: 140%;
+}
+
+.kolor1, .kolor2, .kolor3, .kolor4
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.kol
+{
+    transition: 0.4s ease transform;
+    transform: scale(0);
+}
+
+.sekcjaodp .kolor .kolor1,.sekcjaodp .kolor .kolor2,.sekcjaodp .kolor .kolor3,.sekcjaodp .kolor .kolor4
+{
+    transition: 0.4s ease transform;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 17.5px;
+}
+
+.sprawdz
+{
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    box-sizing: border-box;
+    padding-top: 3px;
+}
+
+.sprawdzMulti
+{
+    height: 57px;
+}
+
+.kropka
+{
+    width: 15px;
+    height: 15px;
+    background-color: #cc9963;
+    border-radius: 100%;
+}
+
+.wysrodkowanie
+{
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+    box-sizing: border-box;
+    height: 40%;
+    padding-top: 7px;
+    margin: 0 auto;
+}
+
+.kropka1, .kropka2, .kropka3, .kropka4
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.kro
+{
+    transition: 0.4s ease transform;
+    transform: scale(0);
+}
+
+.kolory
+{
+    margin-top: 10px;
+}
+
+.kolory1
+{
+    background-color: #e22d2d;
+    cursor: pointer;
+}
+
+.kolory2
+{
+    background-color: #f58023;
+    cursor: pointer;
+}
+
+.kolory3
+{
+    background-color: #e1be29;
+    cursor: pointer;
+}
+
+.kolory4
+{
+    background-color: #9cc841;
+    cursor: pointer;
+}
+
+.kolory5
+{
+    background-color: #3d81c2;
+    cursor: pointer;
+}
+
+.kolory6
+{
+    background-color: #644b9e;
+    cursor: pointer;
+}
+
+.kolory .kolor:hover, .butmenu:hover, .restart:hover, .cofnij:hover, .ok:hover
+{
+    transform: scale(1.05);
+    transition: 0.2s ease all;
+}
+
+.kolory .kolor
+{
+    transition: 0.2s ease all;
+}
+
+.buttons
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+
+.wysrodkowanie2
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.wysrodkowanie2:first-child
+{
+    margin-bottom: 20px;
+}
+
+.czas, .restart, .butmenu, .cofnij
+{
+    width: 100px;
+    height: 40px;
+}
+
+.czas
+{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+    font-family: 'Pacifico', cursive, monospace;
+    line-height: 110%;
+    color: #5b2f00;
+}
+
+.info
+{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 220%;
+    color: #5b2f00;
+    font-family: Segoe ui;
+    letter-spacing: 0.5px;
+    width: 240px;
+    font-size: 17px;
+}
+
+.nazwa1, .wynik1, .nazwa2, .wynik2 
+{
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 170%;
+    color: #5b2f00;
+    font-family: Segoe ui;
+    letter-spacing: 0.5px;
+    width: 220px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.flex
+{
+    width: 250px;
+}
+
+.wynik1, .wynik2
+{
+    width: 25px;
+    font-size: 15px;
+}
+
+.cofnij
+{
+    background-color: #f58023;
+    border-radius: 40px;
+    color: #ffd1a0;
+    font-weight: 1000;
+    font-size: 50px;
+    text-align: center;
+    line-height: 65%;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.butmenu
+{
+    color: #ffd1a0;
+    background-color: #e22d2d;
+    border-radius: 40px;
+    font-size: 20px; 
+    font-family: Segoe ui;
+    font-weight: 700;
+    text-align: center;
+    line-height: 190%;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.restart
+{
+    color: #ffd1a0;
+    background-color: #9cc841;
+    border-radius: 40px;
+    font-size: 20px; 
+    font-family: Segoe ui;
+    font-weight: 700;
+    text-align: center;
+    line-height: 190%;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.alert
+{
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    border: 3px solid #5b2f00;
+    background: #ffd1a0;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: 1s ease all;
+    filter: opacity(0);
+    pointer-events: none;
+}
+
+h2, h3
+{
+    color: #5b2f00;
+    font-family: 'Damion', cursive;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.userId
+{
+    display: block;
+    color: #5b2f00;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+    background-color: transparent;
+    outline: none;
+    border: #5b2f00 3px solid;
+    width: 320px;
+}
+
+.userIdInput, .userNickInput {
+    display: block;
+    color: #5b2f00;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+    background-color: transparent;
+    outline: none;
+    border: #5b2f00 3px solid;
+    width: 320px;
+}
+
+.userIdInput:focus::placeholder, .userNickInput:focus::placeholder {
+    color: transparent;
+}
+
+.userIdInput::placeholder, .userNickInput::placeholder {
+    color: #b58757;
+}
+
+.userId 
+{
+    border: none;
+    width: 100%;
+}
+
+.pom
+{
+    margin: 15px 0 -40px 0 !important;
+    font-size: 35px !important;
+}
+
+.span1, .span2
+{
+    display: block;
+    width: 50%;
+    float: left;
+    font-family: Segoe ui;
+    font-weight: 700;
+    color: #5b2f00;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.span2
+{
+    text-align: right;
+}
+
+.ok, .yes, .no
+{
+    color: #ffd1a0;
+    background-color: #9cc841;
+    border-radius: 40px;
+    font-size: 20px; 
+    font-family: Segoe ui;
+    font-weight: 700;
+    text-align: center;
+    line-height: 190%;
+    transition: 0.2s ease all;
+    cursor: pointer;
+    width: 100px;
+    margin: 25px auto 0 auto;
+}
+
+.back
+{
+    margin: 80px auto 0 auto;
+}
+
+p
+{
+    color: #5b2f00;
+    font-family: segoe ui;
+    font-size: 20px;
+    display: block;
+    margin: 55px 30px;
+    text-align: justify;
+    font-weight: 700;
+}
